@@ -8,7 +8,7 @@
     </StartupFile>
     <SearchPath>
     </SearchPath>
-    <WorkingDirectory>.</WorkingDirectory>
+    <WorkingDirectory>.\PyBuff</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>PyBuff</Name>
     <RootNamespace>PyBuff</RootNamespace>
@@ -24,13 +24,14 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="src\PyBuff.py" />
+    <Compile Include="PyBuff\src\PyBuff.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|2.7" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\" />
+    <Folder Include="PyBuff\" />
+    <Folder Include="PyBuff\src\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
