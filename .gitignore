@@ -99,10 +99,6 @@ StyleCopReport.xml
 *.scc
 
 *.sln
-*.pyproj
-
-*.gitignore
-*.gitattributes
 
 # Chutzpah Test files
 _Chutzpah*
