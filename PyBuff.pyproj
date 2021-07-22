@@ -24,7 +24,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="PyBuff\src\Star.py" />
+    <Compile Include="PyBuff\src\rect.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PyBuff\src\star.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|2.7" />
