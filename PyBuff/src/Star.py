@@ -21,6 +21,7 @@ class star(object):
             self.armLength = width/2
         else:
             self.armLength = height/2
+    # Create function to handle drawing in pygame
     def draw(self, surface, angle, colour = (), width = 0):
         if colour == ():
             colour = self.colour

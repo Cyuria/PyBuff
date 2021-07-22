@@ -9,5 +9,6 @@ class rect(object):
         self.y = y
         self.width = width
         self.height = height
+    # Create function to get the diagonals of the rect using pythagoras
     def getDiagonals(self):
         return (self.width^2 + self.height^2)^0.5
