@@ -1,6 +1,7 @@
 # Create a star for pygame
 import pygame
 import rect
+import moremath
 
 # Star class. Defaults to a black 5 pointed star
 class star(object):
@@ -22,10 +23,12 @@ class star(object):
         else:
             self.armLength = height/2
     # Create function to handle drawing in pygame
-    def draw(self, surface, angle, colour = (), width = 0):
-        if colour == ():
-            colour = self.colour
+    def draw(self, surface, angle, colour = self.colour, width = 0, fill = false):
         coords = []
         for arm in range(self.points):
+            # use Tan(deg) = y/x. multiply by x and got number
+            moremath.tanLen(arm * 360/self.points, self.armLength)
             pass
         pygame.draw.polygon(surface, colour, coords, width)
+        if fill:
+            pygame.draw.polygon(surface, colour, coords, 0)

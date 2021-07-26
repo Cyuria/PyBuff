@@ -24,6 +24,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="PyBuff\src\moremath.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PyBuff\src\rect.py">
       <SubType>Code</SubType>
     </Compile>
