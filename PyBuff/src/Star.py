@@ -23,12 +23,14 @@ class star(object):
         else:
             self.armLength = height/2
     # Create function to handle drawing in pygame
-    def draw(self, surface, angle, colour = self.colour, width = 0, fill = false):
+    def draw(self, surface, colour = self.colour, armLength = self.armLength, innerdist = self.innerdist, width = 0, fill = false, edgeColour = (0,0,0)):
         coords = []
         for arm in range(self.points):
-            # use Tan(deg) = y/x. multiply by x and got number
-            moremath.tanLen(arm * 360/self.points, self.armLength)
-            pass
-        pygame.draw.polygon(surface, colour, coords, width)
+            coords.append(moremath.tanLen(arm * 360/self.points, armLength))
+            coords.append(moremath.tanLen((arm + 0.5) * 360/self.points, innerdist))
         if fill:
+            pygame.draw.polygon(surface, edgeColour, coords, width)
             pygame.draw.polygon(surface, colour, coords, 0)
+        else:
+            pygame.draw.polygon(surface, colour, coords, width)
+        
